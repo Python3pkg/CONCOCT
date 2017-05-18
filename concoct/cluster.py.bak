@@ -16,6 +16,6 @@ def cluster(args):
         logging.warning(("Clustering into {0} clusters did not "
                          "converge, consider increasing the number "
                          "of iterations.").format(c))
-        print("Cluster {0} did not converge".format(c), file=sys.stderr)
+        print >> sys.stderr, "Cluster {0} did not converge".format(c)
     return bic, c, gmm.converged_, gmm
 
